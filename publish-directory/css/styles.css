@@ -1,0 +1,73 @@
+/* DEFAULT STYLES */
+
+/* Import Modular CSS Files */
+
+@import "../css/navbar.css";
+@import "../css/main.css";
+@import "../css/footer.css";
+
+/* link color */
+
+:root {
+  /* Main Design Colors*/
+  --primary-color: white;
+  --secondary-color: #ffb24b;
+  --text-color: white;
+
+  /* Card border color  */
+  --border-gradient: linear-gradient(to right, #ffb24b, #1e1e22);
+
+  /* Card background color*/
+  --card-bg: #292f33;
+
+  /* Hovered icons color  */
+  --card-1-icon-bg: #89cdf2;
+  --card-2-icon-bg: #c0ff70;
+  --card-3-icon-bg: #f77e53;
+  --card-4-icon-bg: #e8db67;
+
+  /* Hovered card effect colors */
+  --card-1-hover-bg: rgb(137, 205, 242);
+  --card-2-hover-bg: rgba(192, 255, 112, 1);
+  --card-3-hover-bg: rgba(247, 126, 83, 1);
+  --card-4-hover-bg: rgba(232, 219, 103, 1);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+/* Typography */
+h5 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+button {
+  font-size: 1rem;
+}
+
+/* background image  */
+.background-container {
+  background-image: url("../asset/images/background/background.png");
+  background-color: #848484;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* heading font size */
+
+/* Small screen */
+
+/* Large screen  */
