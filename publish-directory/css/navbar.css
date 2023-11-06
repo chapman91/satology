@@ -1,9 +1,11 @@
+@import "styles.css";
+
 .navbar {
   background-color: #333;
-  color: white;
+  color: var(--primary-color);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: right;
   position: fixed;
   top: 0;
   width: 100%;
@@ -13,11 +15,17 @@
 .logo {
   display: flex;
   align-items: center;
+  margin: 0.5rem;
 }
 
 .logo img {
-  height: 40px;
+  height: 4rem;
+  width: 4rem;
   margin-right: 10px;
+}
+
+.colored {
+  color: var(--secondary-color);
 }
 
 .nav-list {
@@ -35,10 +43,11 @@
   text-decoration: none;
   color: white;
   transition: background-color 0.3s;
+  font-weight: 600;
 }
 
 .nav-list a:hover {
-  background-color: #e8db67;
+  color: var(--secondary-color);
   border-radius: 5px;
 }
 
@@ -52,16 +61,68 @@
 }
 
 .hamburger-menu {
-  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: flex;
   flex-direction: column;
-  cursor: pointer;
-  margin-right: 20px;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
 }
 
-.bar {
-  width: 25px;
+.hamburger-menu .bar {
   height: 3px;
+  width: 100%;
   background-color: white;
-  margin: 4px 0;
-  transition: 0.4s;
+  border-radius: 10px;
+}
+
+/* Styles for screens between 481px and 767px (Tablet) */
+@media (max-width: 768px) {
+  .navbar {
+    align-items: flex-start;
+    position: fixed;
+    width: 100%;
+  }
+
+  .nav-list {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    text-align: center;
+  }
+
+  .nav-list li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-list.active {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 400;
+    flex-direction: column;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-list,
+  .web3-connect {
+    display: none;
+    width: 100%;
+  }
+  /*  */
+  .web3-connect {
+    display: none;
+  }
+
+  /*  */
+}
+
+/* Styles for screens between 768px and 991px (Larger Tablet ) */
+@media (min-width: 768px) and (max-width: 991px) {
 }

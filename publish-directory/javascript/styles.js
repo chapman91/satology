@@ -1,6 +1,8 @@
-// Loads sections of the page dynamically
+const contentContainer = document.getElementById("content");
+const footerContainer = document.querySelector("footer");
 
-function loadComponent(componentName) {
+// Loads sections of the page dynamically
+function loadComponent(componentName, container) {
   fetch(`${componentName}.html`)
     .then((response) => response.text())
     .then((data) => {
@@ -10,19 +12,20 @@ function loadComponent(componentName) {
 
 // Handle navigation and load components
 window.addEventListener("hashchange", () => {
+  // store the current fragment identifier
   const hash = window.location.hash;
   switch (hash) {
-    case "#home":
-      loadComponent("home");
+    case "../publish-directory/html/navbar.html":
+      loadComponent("navbar");
       break;
-    case "#about":
-      loadComponent("about");
+    case "../publish-directory/html/main.html":
+      loadComponent("main");
       break;
-    default:
-      loadComponent("home"); // Load the home component by default
+    case "../publish-directory/html/footer.html":
+      loadComponent("footer");
       break;
   }
 });
 
 // Initial component load
-loadComponent("home");
+loadComponent("navbar");
