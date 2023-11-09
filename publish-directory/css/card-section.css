@@ -40,6 +40,7 @@ body {
   flex: 1; /* Equal width on all screen sizes */
   background-color: var(--card-bg);
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  height: auto;
 }
 
 /* color hover effect */
@@ -143,15 +144,21 @@ body {
 
 /* Tablet styles (769px to 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* Adjust styles for tablets */
+  .card {
+    max-width: 20.625rem;
+  }
 }
 
 /* Medium screens (1025px to 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
-  /* Adjust styles for medium screens */
+  .card {
+    max-width: 28.125rem;
+  }
 }
 
 /* Large screens (greater than 1440px) */
 @media (min-width: 1441px) {
-  /* Adjust styles for large screens */
+  .card {
+    max-width: 39.0625;
+  }
 }
