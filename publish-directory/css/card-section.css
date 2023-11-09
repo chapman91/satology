@@ -1,15 +1,17 @@
-/* Basic styling */
+/* imported custom stylesheet */
 @import "../css/styles.css";
 
+/* Default css */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: grey;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: var(-text-color);
 }
 
 /* card container layout */
@@ -30,11 +32,19 @@ body {
 
 /* card layout */
 .card {
-  border: 1px solid #ccc;
+  position: relative;
+  border: 1px solid transparent;
   border-radius: 1.6em;
   padding: 1.5rem;
   margin: 1.875rem;
   flex: 1; /* Equal width on all screen sizes */
+  background-color: var(--card-bg);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* color hover effect */
+.card:hover {
+  border-color: var(--secondary-color);
 }
 
 /* card heading  */
@@ -47,6 +57,67 @@ body {
 .title h3 {
   margin-right: 0.8rem;
   color: var(--primary-color);
+}
+
+/* Top  */
+.top-cards > :nth-child(1 of .card):hover {
+  /* border-color: var(--card-1-hover-bg); */
+
+  box-shadow: 0 0 10px var(--card-1-hover-bg);
+}
+
+/* hover effect second card */
+.top-cards > :nth-child(2 of .card):hover {
+  box-shadow: 0 0 10px var(--card-2-hover-bg);
+}
+
+.bottom-cards > :nth-child(1 of .card):hover {
+  box-shadow: 0 0 10px var(--card-3-hover-bg);
+}
+
+.bottom-cards > :nth-child(2 of .card):hover {
+  box-shadow: 0 0 10px var(--card-4-hover-bg);
+}
+
+/* hover icon color */
+.top-cards .card:nth-child(1):hover img {
+  box-shadow: 0 0 10px var(--card-1-hover-bg);
+}
+
+/* hover text color  */
+.top-cards .card:nth-child(1):hover h3 {
+  color: var(--card-1-hover-bg);
+}
+
+/* hover icon color */
+.top-cards .card:nth-child(2):hover img {
+  box-shadow: 0 0 10px var(--card-2-hover-bg);
+  backdrop-filter: blur();
+}
+
+/* hover text color  */
+.top-cards .card:nth-child(2):hover h3 {
+  color: var(--card-2-hover-bg);
+}
+
+/* hover icon color */
+.bottom-cards .card:nth-child(1):hover img {
+  box-shadow: 0 0 10px var(--card-3-hover-bg);
+}
+
+/* hover text color  */
+.bottom-cards .card:nth-child(1):hover h3 {
+  color: var(--card-3-hover-bg);
+}
+
+/* hover icon color */
+.bottom-cards .card:nth-child(2):hover img {
+  box-shadow: 0 0 10px var(--card-4-hover-bg);
+}
+
+/* hover icon color */
+.bottom-cards .card:nth-child(2):hover h3 {
+  color: var(--card-4-hover-bg);
 }
 
 @media screen and (max-width: 600px) {
