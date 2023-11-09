@@ -5,13 +5,14 @@
   color: var(--primary-color);
   display: flex;
   justify-content: space-between;
-  align-items: right;
+  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
 
+/* Brand Name */
 .logo {
   display: flex;
   align-items: center;
@@ -28,6 +29,7 @@
   color: var(--secondary-color);
 }
 
+/* Nav items styles */
 .nav-list {
   list-style: none;
   display: flex;
@@ -44,6 +46,7 @@
   color: white;
   transition: background-color 0.3s;
   font-weight: 600;
+  display: block;
 }
 
 .nav-list a:hover {
@@ -53,18 +56,19 @@
 
 .web3-connect {
   background-color: transparent;
-  border: 2px solid #e8db67;
-  color: #e8db67;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
   padding: 8px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
 
+/* Toggle Button Styles */
 .hamburger-menu {
   position: absolute;
-  top: 0.75rem;
+  top: 2rem;
   right: 1rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -80,12 +84,16 @@
 
 /* Styles for screens between 481px and 767px (Tablet) */
 @media (max-width: 768px) {
-  .navbar {
+  /* control nav items and connect button */
+  .nav-main {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 400;
+    flex-direction: column;
     align-items: flex-start;
-    position: fixed;
-    width: 100%;
   }
 
+  /*  */
   .nav-list {
     width: 100%;
     flex-direction: column;
@@ -99,23 +107,23 @@
     padding: 0.5rem 1rem;
   }
 
-  .nav-list.active {
+  /* .nav-list.active {
     display: flex;
     font-size: 1.5rem;
     font-weight: 400;
     flex-direction: column;
-  }
+  } */
 
   .hamburger-menu {
     display: flex;
   }
 
-  .nav-list,
-  .web3-connect {
-    display: none;
+  /* Hides nav items */
+  .nav-list {
+    /* display: none; */
     width: 100%;
   }
-  /*  */
+  /* Hides Connect button */
   .web3-connect {
     display: none;
   }

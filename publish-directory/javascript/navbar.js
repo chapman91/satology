@@ -1,9 +1,9 @@
 const menuToggle = document.getElementById("menu-toggle");
-const navList = document.querySelector(".nav-list");
+const navMain = document.querySelector(".nav-main");
 const connectButton = document.querySelector("connect");
 
 menuToggle.addEventListener("click", () => {
-  navList.classList.toggle("active");
+  navMain.classList.toggle("active");
 });
 
 window.addEventListener("resize", () => {

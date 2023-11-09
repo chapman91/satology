@@ -1,0 +1,131 @@
+@import "/publish-directory/css/styles.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*  */
+body {
+  background: #e3edf7;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  margin-bottom: 30%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layout */
+.hug {
+  display: flex;
+}
+
+/* Targets outer div */
+.skill {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  margin-left: 6rem;
+}
+
+.outer {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  padding: 20px;
+  /* box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7); */
+}
+
+.inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05); */
+}
+
+/* class and type selectors */
+div.skill .hover-div h2 {
+  font-weight: 600px;
+  color: #000000;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+div.skill .hover-div h2:hover {
+  color: var(--secondary-color);
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 5px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 0 10px var(--secondary-color);
+  border-radius: 50%;
+}
+
+svg:hover {
+  box-shadow: 0 0 20px var(--secondary-color);
+}
+
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 165;
+  }
+}
+
+div.skill h5:last-child {
+  display: flex;
+  margin-top: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* :last-child pseudo-class + class selector parent element */
+div.skill h5:last-child:hover {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Mobile styles (up to 768px) */
+@media (max-width: 768px) {
+}
+
+/* Tablet styles (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Adjust styles for tablets */
+}
+
+/* Medium screens (1025px to 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Adjust styles for medium screens */
+}
+
+/* Large screens (greater than 1440px) */
+@media (min-width: 1441px) {
+  /* Adjust styles for large screens */
+}
